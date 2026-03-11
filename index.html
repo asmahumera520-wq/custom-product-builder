@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CreateIT - Custom Product Builder</title>
+
+<!-- connect css -->
+<link rel="stylesheet" href="index.css">
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    <nav class="navbar">
+
+      <!-- Logo -->
+      <h2 class="logo">CREATE<span>IT</span></h2>
+
+      <!-- Menu -->
+      <ul class="nav-links">
+  <li class="dropdown">
+    <a href="#">Shop <i class="fa-solid fa-angle-down"></i></a>
+    <ul class="dropdown-menu">
+      <li><a href="#">T-Shirts</a></li>
+      <li><a href="#">Mugs</a></li>
+      <li><a href="#">Phone Cases</a></li>
+      <li><a href="#">Hoodies</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="#">Customize <i class="fa-solid fa-angle-down"></i></a>
+    <ul class="dropdown-menu">
+      <li><a href="#">Browse Design</a></li>
+      <li><a href="#">Upload Your Art</a></li>
+      <li><a href="#">Use Templates</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="#">How It Works <i class="fa-solid fa-angle-down"></i></a>
+    <ul class="dropdown-menu">
+      <li><a href="#">Choose Product</a></li>
+      <li><a href="#">Customize Designs</a></li>
+      <li><a href="#">Place Order</a></li>
+      <li><a href="#">Get Delivered</a></li>
+    </ul>
+  </li>
+  <li><a href="#"><i class="fa-regular fa-user"></i> Account</a></li>
+  
+  <li><a href="#" class="cart-btnn"><i class="fa-solid fa-cart-shopping"></i> Cart (0)</a></li> 
+ <!-- <li><a href="#" class="settings-btn"><i class="fa-solid fa-gear"></i></a></li> -->  <!--this is a  setting icons-->
+</ul>
+   <!-- <button class="start-btn">Start Designing &rarr;</button> --> 
+
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero">
+
+      <div class="hero-text">
+        <h6>CUSTOM PRODUCT BUILDER STORE</h6>
+        <h4>Design Your Vibe,<br>Create Custom Gear Now.</h4>
+        <p>Personalize T-Shirts, Mugs, <strong>Phone Cases</strong>,<br> and More, All At Once, In Your Dream Colors.</p>
+        <button onclick="startDesign()">Start Designing →</button>
+      </div>
+
+      <div class="hero-image">
+        <img src="images12/color1.jpeg" alt="Custom Gear Designing" />
+      </div>
+
+    </section>
+
+    <!-- ===== PRODUCTS SECTION ===== -->
+    <section class="products-section">
+      <h3>Popular Custom Products</h3>
+      <div class="products-container">
+        <div class="product-card">
+          <img src="https://img.kwcdn.com/product/fancy/92077c13-5420-4ac7-80c6-2af944b09dcd.jpg?imageView2/2/w/500/q/60/format/webp" alt="Custom T-Shirt" width="300px" height="250px" />
+          <h4>Custom T-Shirt</h4>
+          <p>Create your own unique T-shirt with text, image colors.</p>
+         <!--<button class="customize-btn">Customize &rarr;</button> -->
+         <!--<button class="customize-btn" onclick="openCustomize('https://img.kwcdn.com/product/fancy/92077c13-5420-4ac7-80c6-2af944b09dcd.jpg')">Customize →</button>-->
+         <button class="customize-btn" onclick="openCustomize('Custom T-Shirt','https://img.kwcdn.com/product/fancy/92077c13-5420-4ac7-80c6-2af944b09dcd.jpg',55.9)">Customize →</button>
+        </div>
+        <div class="product-card">
+          <img src="https://quapri.in/wp-content/uploads/2025/04/white-ceramic-mug-1.webp" alt="Custom Mug"  width="600px" height="450px"/>
+          <h4>Custom Mug</h4>
+          <p>Personalize your mug with your name, quotes, photos.</p>
+          <!--<button class="customize-btn">Customize &rarr;</button> -->
+         <!-- <button class="customize-btn" onclick="openCustomize('https://quapri.in/wp-content/uploads/2025/04/white-ceramic-mug-1.webp')">Customize →</button>-->
+          <button class="customize-btn" onclick="openCustomize('Custom Mug','https://quapri.in/wp-content/uploads/2025/04/white-ceramic-mug-1.webp',67.8)">Customize →</button>
+        </div>
+        <div class="product-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTlohJaS3WG5jHEebeOkykM5NM_xhnIUYoVQ&s" alt="Phone Case" />
+          <h4>Phone Case</h4>
+          <p>Design a custom phone case with your favorite designs.</p>
+          <!--<button class="customize-btn">Customize &rarr;</button>-->
+        <!--  <button class="customize-btn" onclick="openCustomize('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTlohJaS3WG5jHEebeOkykM5NM_xhnIUYoVQ&s')">Customize →</button>-->
+          <button class="customize-btn" onclick="openCustomize('Phone Case','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTlohJaS3WG5jHEebeOkykM5NM_xhnIUYoVQ&s',66.8)">Customize →</button>
+        </div>
+        <!--<div class="product-card">
+          <img src="https://cdn.yourdesignstore.in/uploads/yds/productImages/thumb/17664811434323optic-wash.jpg" alt="Custom Hoodie" />
+          <h4>Custom Hoodie</h4>
+          <p>Craft your own custom hoodie with text, logos, & colors.</p>
+          <button class="customize-btn">Customize &rarr;</button>
+        </div>-->
+        <div class="product-card">
+  <img src="https://quapri.in/wp-content/uploads/2024/04/SportsCapBlue.webp" alt="Custom Cap" />
+  <h4>Custom Cap</h4>
+  <p>Create your own custom cap with text, logos, & colors.</p>
+ <!-- <button class="customize-btn">Customize →</button>-->
+ <!--<button class="customize-btn" onclick="openCustomize('https://quapri.in/wp-content/uploads/2024/04/SportsCapBlue.webp')">Customize →</button>-->
+ <button class="customize-btn" onclick="openCustomize('Custom Cap','https://quapri.in/wp-content/uploads/2024/04/SportsCapBlue.webp',55.8)">Customize →</button>
+</div>
+<div class="product-card">
+ <!-- <img src="https://thecraftly.in/cdn/shop/files/WaterBottle2.jpg?v=1767012381&width=416" alt="Custom Bottle" />-->
+  <img src="https://5.imimg.com/data5/SELLER/Default/2024/12/471389171/RW/SS/MG/185523558/promotional-sipper-bottle.jpg" alt="Custom Bottle" />
+  <h4>Custom Bottle</h4>
+  <p>Design your own custom bottle with names, logos, or images.</p>
+ <!-- <button class="customize-btn">Customize →</button> -->
+ <!-- <button class="customize-btn" onclick="openCustomize('https://thecraftly.in/cdn/shop/files/WaterBottle2.jpg?v=1767012381&width=416')">Customize →</button>-->
+  <button class="customize-btn" onclick="openCustomize('Custom Bottle','https://5.imimg.com/data5/SELLER/Default/2024/12/471389171/RW/SS/MG/185523558/promotional-sipper-bottle.jpg',50.0)">Customize →</button>
+</div>
+       
+      </div>
+    </section>
+   <!-- Customize Popup -->
+<div id="customizeModal" class="modal">
+
+  <div class="modal-content">
+
+    <span class="close" onclick="closeCustomize()">×</span>
+
+    <div class="modal-container">
+
+      <!-- Left side Image -->
+      <!--<div class="modal-left">
+                                                                        <h3>Customize</h3> this line is useless
+        <h3 id="productTitle">Customize</h3>
+        <img src="images12/color1.jpeg" id="tshirtImage">
+      </div>-->
+      <div class="modal-left">
+<h3 id="productTitle">Customize</h3>
+
+<div class="image-box">
+<img src="images12/color1.jpeg" id="tshirtImage">
+
+<p id="previewText"></p>
+</div>
+<div class="color-options">
+
+<span class="color-circle" style="background:black"
+onclick="changeShirtColor('black')"></span>
+
+<span class="color-circle" style="background:red"
+onclick="changeShirtColor('red')"></span>
+
+<span class="color-circle" style="background:blue"
+onclick="changeShirtColor('blue')"></span>
+
+<span class="color-circle" style="background:green"
+onclick="changeShirtColor('green')"></span>
+
+<span class="color-circle" style="background:orange"
+onclick="changeShirtColor('orange')"></span>
+
+</div>
+
+</div>
+      <!-- Right side Options -->
+      <div class="modal-right">
+     <!-- <div class="side-icons">
+
+<i class="fa fa-heart wishlist"></i>
+
+<div class="share-icons">
+<i class="fa fa-share-alt"></i>
+<i class="fa fa-facebook"></i>
+<i class="fa fa-twitter"></i>
+<i class="fa fa-instagram"></i>
+</div>
+
+</div>-->
+       <div class="side-icons">
+
+<i class="fa-regular fa-heart wishlist" onclick="toggleWishlist(this)"></i>
+
+<div class="share-icons">
+
+<i class="fa-brands fa-whatsapp" onclick="shareProduct()"></i>
+<i class="fa-brands fa-facebook" onclick="shareProduct()"></i>
+<i class="fa-brands fa-twitter" onclick="shareProduct()"></i>
+<i class="fa-brands fa-instagram" onclick="shareProduct()"></i>
+
+</div>
+
+</div>
+
+        <label>Add Text:</label>
+        <input type="text" id="textInput" placeholder="Enter your text">
+
+        <label>Choose Color:</label>
+        <input type="color" id="textColor">
+
+        <label>Upload Image:</label>
+        <input type="file" id="imageUpload">  <!-- user upload image for product customization-->
+        <label>Text Size:</label>
+<input type="range" id="textSize" min="12" max="60" value="20">
+
+<label>Image Size:</label>
+<input type="range" id="imgSize" min="50" max="250" value="100">
+
+        <button class="cart-btn" id="cartBtn">Add to Cart - $29.9</button>
+     <!-- <button class="customize-btn" onclick="openCustomize()">Customize →</button>-->
+       <!--<button class="customize-btn">Customize →</button>-->
+       <button class="customize-btn" onclick="applyCustomization()">Apply Customization</button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <div class="footer-links">
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+      </div>
+      <p>© 2024 CREATEIT. All rights reserved.</p>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>
