@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Your Cart</title>
+<style>
+
+body{
+font-family:Arial;
+padding:40px;
+background:#f5f5f5;
+}
+
+.cart-item{
+background:white;
+padding:15px;
+margin-bottom:10px;
+display:flex;
+justify-content:space-between;
+border-radius:8px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h2>Your Cart</h2>
+
+<div id="cartItems"></div>
+
+<h3>Total: $<span id="total">0</span></h3>
+
+<script>
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+let container = document.getElementById("cartItems");
+
+let total = 0;
+
+cart.forEach(item => {
+
+container.innerHTML += `
+<div class="cart-item">
+<span>${item.name}</span>
+<span>$${item.price}</span>
+</div>
+`;
+
+total += Number(item.price);
+
+});
+
+document.getElementById("total").innerText = total;
+
+</script>
+
+</body>
+</html>
