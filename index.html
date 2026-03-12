@@ -131,6 +131,7 @@ Cart (<span id="cartCount">0</span>)
       </div>
     </section>
    <!-- Customize Popup -->
+<!-- Customize Popup -->
 <div id="customizeModal" class="modal">
 
   <div class="modal-content">
@@ -139,67 +140,46 @@ Cart (<span id="cartCount">0</span>)
 
     <div class="modal-container">
 
-      <!-- Left side Image -->
-      <!--<div class="modal-left">
-                                                                        <h3>Customize</h3> this line is useless
-        <h3 id="productTitle">Customize</h3>
-        <img src="images12/color1.jpeg" id="tshirtImage">
-      </div>-->
+      <!-- Left side -->
       <div class="modal-left">
-<h3 id="productTitle">Customize</h3>
 
-<div class="image-box">
-<img src="images12/color1.jpeg" id="tshirtImage">
+        <h3 id="productTitle">Customize</h3>
 
-<p id="previewText"></p>
-</div>
-<div class="color-options">
+        <div class="image-box">
+          <img src="images12/color1.jpeg" id="tshirtImage">
+          <p id="previewText"></p>
+        </div>
 
-<span class="color-circle" style="background:black"
-onclick="changeProductColor('black')"></span>
+        <div class="color-options">
 
-<span class="color-circle" style="background:red"
-onclick="changeProductColor('red')"></span>
+          <span class="color-circle" style="background:black"
+          onclick="changeProductColor('black')"></span>
 
-<span class="color-circle" style="background:blue"
-onclick="changeProductColor('blue')"></span>
+          <span class="color-circle" style="background:red"
+          onclick="changeProductColor('red')"></span>
 
-<span class="color-circle" style="background:green"
-onclick="changeProductColor('green')"></span>
+          <span class="color-circle" style="background:blue"
+          onclick="changeProductColor('blue')"></span>
 
-<span class="color-circle" style="background:orange"
-onclick="changeProductColor('orange')"></span>
+          <span class="color-circle" style="background:green"
+          onclick="changeProductColor('green')"></span>
 
-</div>
-</div>
-      <!-- Right side Options -->
+          <span class="color-circle" style="background:orange"
+          onclick="changeProductColor('orange')"></span>
+
+        </div>
+
+      </div>
+
+
+      <!-- Right side -->
       <div class="modal-right">
-     <!-- <div class="side-icons">
 
-<i class="fa fa-heart wishlist"></i>
-
-<div class="share-icons">
-<i class="fa fa-share-alt"></i>
-<i class="fa fa-facebook"></i>
-<i class="fa fa-twitter"></i>
-<i class="fa fa-instagram"></i>
-</div>
-
-</div>-->
-       <div class="side-icons">
-
-<i class="fa-regular fa-heart wishlist" onclick="toggleWishlist(this)"></i>
-
-<div class="share-icons">
-
-<i class="fa-brands fa-whatsapp" onclick="shareProduct()"></i>
-<i class="fa-brands fa-facebook" onclick="shareProduct()"></i>
-<i class="fa-brands fa-twitter" onclick="shareProduct()"></i>
-<i class="fa-brands fa-instagram" onclick="shareProduct()"></i>
-
-</div>
-<div id="productContainer"></div>
-</div>
+        <!-- Icons -->
+        <div class="side-icons">
+          <i class="fa-regular fa-heart wishlist" onclick="toggleWishlist(this)"></i>
+          <i class="fa-solid fa-share-nodes share-icon" onclick="shareProduct()"></i>
+        </div>
 
         <label>Add Text:</label>
         <input type="text" id="textInput" placeholder="Enter your text">
@@ -208,17 +188,19 @@ onclick="changeProductColor('orange')"></span>
         <input type="color" id="textColor">
 
         <label>Upload Image:</label>
-        <input type="file" id="imageUpload">  <!-- user upload image for product customization-->
-        <label>Text Size:</label>
-<input type="range" id="textSize" min="12" max="60" value="20">
+        <input type="file" id="imageUpload">
 
-<label>Image Size:</label>
-<input type="range" id="imgSize" min="50" max="250" value="100">
+        <label>Text Size:</label>
+        <input type="range" id="textSize" min="12" max="60" value="20">
+
+        <label>Image Size:</label>
+        <input type="range" id="imgSize" min="50" max="250" value="100">
 
         <button class="cart-btn" id="cartBtn">Add to Cart - $29.9</button>
-     <!-- <button class="customize-btn" onclick="openCustomize()">Customize →</button>-->
-       <!--<button class="customize-btn">Customize →</button>-->
-       <button class="customize-btn" onclick="applyCustomization()">Apply Customization</button>
+
+        <button class="customize-btn" onclick="applyCustomization()">
+          Apply Customization
+        </button>
 
       </div>
 
@@ -227,6 +209,7 @@ onclick="changeProductColor('orange')"></span>
   </div>
 
 </div>
+     
 
     <!-- ===== FOOTER ===== -->
     <footer>
