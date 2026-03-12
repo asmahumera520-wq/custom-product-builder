@@ -1,0 +1,555 @@
+
+/* Keep your existing styles for body, navbar, hero, etc. */
+
+/* Navbar updated */
+/*.navbar {
+  padding: 15px 5%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links {
+  gap: 25px;
+  font-size: 14px;
+}
+
+.nav-links a {
+  color: #151414;
+  font-weight: 500;
+}
+*/
+body{
+font-family: Arial;
+margin:0;
+background:#f5f5f5;
+}
+
+
+
+/* ===== NAVBAR ===== */
+/* NAVBAR STYLE */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    background:white;
+    color:rgb(21, 20, 20);
+}
+
+/* logo style */
+.logo{
+    font-size:22px;
+    font-weight:bold;
+}
+.logo span{
+color:#00c6ff;
+}
+
+/* menu list */
+.nav-links{
+display:flex;
+flex-direction: row;
+justify-content:center;
+padding: 0;
+gap:35px;
+list-style:none;
+align-items:center;
+position: absolute;
+left: 50%;
+margin-left:auto;/*   push items to right*/
+list-style: none;  /*  optional*/
+transform: translateX(-50%);
+
+}
+
+.nav-links a{
+text-decoration:none;
+color:black;
+font-size:20px;
+position:relative;
+transition:0.3s;
+
+}
+
+.nav-links>li> a::after{                     /*   if u remove >li> it get underline under word*/
+content:"";
+position:absolute;              
+left:0;
+bottom:-5px;
+width:0;
+height:2px;
+background:black;
+transition:0.3s;
+}
+
+.nav-links >li>a:hover{       /* if u remove >li>    the words will move*/
+transform:translateY(-3px);
+}
+
+.nav-links >li> a:hover::after{   
+width:100%;
+}
+/* Dropdown Container */
+.nav-links li.dropdown {
+  position: relative;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  color: black;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  border-radius: 6px;
+  z-index: 1000;
+  pointer-events: none;
+  
+}
+
+/* Dropdown menu item style */
+.dropdown-menu li {
+  padding: 8px 20px;
+  white-space: nowrap;
+}
+
+.dropdown-menu li a {
+  /*color: #151414;*/
+ /* text-decoration: none;*/
+  font-weight: 500;
+  display: block;
+  transition: background 0.2s ease;
+  font-family:'Playfair Display', serif;
+  font-size: 14px;
+  color: #555;
+}
+
+.dropdown-menu li a:hover {
+  background: #c5c8cc;
+ /* color: white;*/
+  border-radius: 4px;
+}
+
+/* Show dropdown on hover */
+.nav-links li.dropdown:hover > .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* For touch/click devices, add a pointer cursor to the dropdown parent */
+.nav-links li.dropdown > a {
+  cursor: pointer;
+}
+  /*.start-btn {
+  background: #4266f5; 
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 22px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.start-btn:hover {
+  background: #274ddb;
+}
+*/
+/* Hero section */
+.nav-right{
+display:flex;
+align-items:center;
+gap:12px;
+margin-left:10px;
+}
+
+/*.settings-btn{
+font-size:18px;
+color:#333;
+padding:6px;
+}
+
+.settings-btn:hover{
+color:#5c7cfa;
+transform:rotate(90deg);
+transition:0.3s;
+}*/
+.cart-btnn{
+padding:8px 16px;
+border:1px solid #d3d3d3;
+border-radius:25px;
+margin-left:60px;
+background:white;
+transition:0.3s;
+white-space: nowrap;   /*  prevents breaking cart   when u set the setting cart will break*/
+}
+.cart-btnn::after{
+display:none;
+}
+
+.cart-btnn:hover{
+background:#7fa5e9;
+color:white;
+}
+
+.hero {
+  background: linear-gradient(90deg,#050324,#060436);
+  color: white;
+  padding: 80px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  gap: 40px;
+}
+
+.hero h4 {
+  font-size: 50px;
+  font-weight: 700;
+  margin: 12px 0;
+  line-height: 1.2;
+}
+
+.hero h6 {
+  color: #5995FF; /* Bright blue highlight */
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.hero p {
+  font-size: 17px;
+  line-height: 1.4;
+  margin-bottom: 30px;
+}
+
+.hero button {
+  background: #5995FF;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.hero button:hover {
+  background: #4077f7;
+}
+
+.hero-image img {
+  max-width: 450px;
+  height: auto;
+}
+
+
+/* Products Section */
+.products-section {
+  background: #f9f9f9;
+  padding: 40px 10%;
+  text-align: center;
+  color: #151414;
+}
+
+.products-section h3 {
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+.products-container {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: visible;
+  padding-top: 10px;
+  padding-bottom: 15px;
+
+
+}
+
+.product-card {
+  background: white;
+  padding: 15px 12px 25px 12px;
+  border-radius: 10px;
+  width: 180px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
+  flex-shrink: 0;
+  text-align: center;
+   border:2px solid #101a2b;   /* Blue border */
+  box-sizing: border-box;
+    transition:0.3s;
+}
+
+
+.product-card:hover{
+ /* border:2px solid #5995FF;*/
+  border-color: #5995FF;   /* only color change */
+  transform:translateY(-3px);
+}
+/*.product-card{
+  background:white;        this is for cover the image 
+  border-radius:10px;
+  overflow:hidden;    
+  width:220px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}*/
+/*.product-card img{
+width:100%;
+height:160px;
+object-fit:contain;
+background:#f5f5f5;
+padding:10px;
+border-radius:8px;
+margin-bottom:12px;
+}
+*/
+.product-card img{
+width:100%;
+height:160px;
+object-fit:cover;
+border-radius:10px 10px 0 0;
+/*margin-bottom:12px;*/
+display: block;
+}
+
+.product-card h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.product-card p {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 10px;
+  min-height: 46px; /* consistent height */
+}
+
+.customize-btn {
+  background: #2e70e2;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  padding: 8px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  transition: background 0.3s ease;
+}
+
+.customize-btn:hover {
+  background: #4077f7;
+}
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+backdrop-filter:blur(5px);
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.modal-content{
+background:white;
+padding:30px;
+border-radius:12px;
+width:750px;
+border:3px solid black;
+transform:scale(0.7);
+animation:popup 0.3s ease forwards;
+display: flex;
+gap:40px;
+min-height: 350px;
+}
+@keyframes popup{
+from{
+transform:scale(0.7);
+opacity:0;
+}
+to{
+transform:scale(1);
+opacity:1;
+}
+}
+.modal-container{
+display:flex;
+gap:30px;
+}
+
+.modal-left img{
+width:250px;
+}
+/*.modal-left{
+background:linear-gradient(135deg,#909295,#a2a6aa);
+padding:30px;
+border-radius:12px;           this model-left and model-left img   can do in popup mesage it get the background to the photo
+display:flex;
+align-items:center;
+justify-content:center;
+display: flex;
+flex-direction:column;
+align-items: center;
+}*/
+.modal-left h3{
+  margin-bottom: 10px;
+}
+/*
+.modal-left img{
+width:220px;
+background:white;
+padding:20px;
+border-radius:10px;
+}*/
+
+.modal-right{
+display:flex;
+flex-direction:column;
+gap:20px;
+
+}
+.image-box{
+position:relative;
+}
+
+#previewText{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);      /*after user input taken*/
+font-weight:bold;
+font-size:20px;
+/*ointer-events:none;*/
+cursor: move;
+user-select: none;
+}
+.color-options{
+display:flex;
+gap:10px;
+justify-content:center;
+margin-top:10px;
+}
+
+.color-circle{
+width:25px;
+height:25px;
+border-radius:50%;
+cursor:pointer;
+border:2px solid #ddd;
+}
+.side-icons{
+position:absolute;
+right:20px;
+top:20px;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.wishlist{
+font-size:22px;
+color:red;
+cursor:pointer;
+border: 2px soild black;
+border-radius: 6px;
+background: white;
+}
+/* when clicked*/
+.wishlist.active{
+  color: red;
+  border-color: red;
+}
+.share-icons i{
+font-size:20px;
+cursor:pointer;
+margin-right:10px;
+}
+
+.cart-btn{
+background:rgb(18, 17, 17);
+color:white;
+padding:10px;
+border:none;
+cursor:pointer;
+border-radius:25px;
+transition: 0.3s;
+}
+
+.cart-btn::after{
+display:none;
+}
+
+.cart-btn:hover{
+background:#90b0e8;
+color:rgb(3, 3, 3);
+}
+
+.close{
+float:right;
+font-size:25px;
+cursor:pointer;
+}
+/* Footer */
+footer {
+  background: #4266f5;
+  color: white;
+  padding: 15px 10%;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #070809;
+}
+/*html,body{
+height:100%;
+margin:0;
+display:flex;
+flex-direction:column;
+}
+
+.products-section{
+flex:1;
+}*/
+
+footer{
+background:#4266f5;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:auto;
+}
