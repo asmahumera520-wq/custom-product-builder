@@ -407,3 +407,20 @@ count.innerText = cart.length;
 }
 
 }
+function toggleWishlist(icon){
+icon.classList.toggle("active");
+}
+function shareProduct(){
+
+const url = window.location.href;
+
+if(navigator.share){
+navigator.share({
+title:"Check this product",
+url:url
+});
+}else{
+alert("Copy this link to share: " + url);
+}
+
+}
